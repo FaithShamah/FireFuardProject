@@ -131,7 +131,7 @@ const Dashboard = () => {
 
         setTemperature(latestReading.temperature);
         setHumidity(latestReading.humidity);
-        setFireDetected(latestReading.fire > 0); // assuming fire > 0 means detected
+        setFireDetected(latestReading.fire < 16); // assuming fire > 0 means detected
         setLastUpdate(new Date(latestReading.timestamp));
 
         // Update temperature history for chart
